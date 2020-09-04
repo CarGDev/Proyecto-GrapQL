@@ -12,6 +12,7 @@ const resolvers = require('./lib/resolvers')
 const app = express()
 const config = require('./config')
 const port = config.port.port
+const isDev = process.env.NODE_ENV !== 'production'
 
 // Definiendo el esquema
 const typeDefs = readFileSync(
@@ -27,7 +28,7 @@ app.use(cors())
 app.use('/api', graphqlHTTP({
   schema: schema,
   rootValue: resolvers,
-  graphiql: true
+  graphiql: isDev
 }))
 
 app.listen(port, () => {
