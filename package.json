@@ -21,11 +21,15 @@
     "express": "^4.17.1",
     "express-graphql": "^0.11.0",
     "graphql": "^15.3.0",
+    "graphql-request": "^3.0.0",
     "graphql-tools": "^6.2.0",
+    "handlebars": "^4.7.6",
     "mongodb": "^3.6.1"
   },
   "devDependencies": {
+    "browserify": "^16.5.2",
     "nodemon": "^2.0.4",
-    "standard": "^14.3.4"
+    "standard": "^14.3.4",
+    "uglifyify": "^5.0.2"
   }
 }
